@@ -1,9 +1,10 @@
-const flowbite = require("flowbite-react/tailwind");
+// const flowbite = require("flowbite-react/tailwind");
+import flowbitePlugin from 'flowbite/plugin';
 
 /** @type {import('tailwindcss').Config} */
 export default {
   important: true,
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
     backgroundImage: {
@@ -15,5 +16,7 @@ export default {
       "banner-home6": `url('./src/assets/img/HeaderBanner (6).png')`,
     },
   },
-  plugins: [flowbite.plugin()],
+  plugins: [
+    flowbitePlugin()
+  ],
 };
